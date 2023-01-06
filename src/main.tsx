@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import './index.css';
-import HomePages from './pages/HomePage';
+import CustomerPage from './pages/CustomerPage';
+import NewCustomerPage from './pages/NewCustomerPage';
 
 const Router = createBrowserRouter([
   {
@@ -11,8 +12,12 @@ const Router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: 'home',
-        element: <HomePages />,
+        index: true,
+        element: <CustomerPage />,
+      },
+      {
+        path: 'new/customer',
+        element: <NewCustomerPage />,
       },
     ],
   },
