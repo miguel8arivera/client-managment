@@ -3,7 +3,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 
 const Layout: FC = function () {
   const location = useLocation();
-  console.log(location);
+
   return (
     <div className="md:flex md:min-h-screen">
       <aside className="md:w-1/4 bg-indigo-300  px-5 py-8">
