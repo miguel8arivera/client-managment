@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CustomerPageForm from '../components/CustomerPageForm';
 
 const NewCustomerPage: FC = function () {
   const navigate = useNavigate();
@@ -20,9 +21,13 @@ const NewCustomerPage: FC = function () {
         <p className="text-center font-bold text-blue-900 uppercase">
           Register Customer
         </p>
+
+        <CustomerPageForm />
       </div>
     </div>
   );
 };
 
 export default NewCustomerPage;
+
+// na na na tonight we gonna get on the floor  music
