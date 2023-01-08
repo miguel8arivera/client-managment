@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { TiMail, TiPhone } from 'react-icons/ti';
 
 const Customer: FC = function ({ customer }) {
   const { name, company, email, id, phone } = customer;
@@ -9,12 +10,14 @@ const Customer: FC = function ({ customer }) {
       </td>
       <td className="p-6 text-center">
         <p className="text-gray-600 ">
-          {' '}
-          <span className="text-gray-800  font-semibold">{email}</span>
+          <span className=" flex flex-row justify-center  text-gray-800  font-semibold">
+            <TiMail className="mr-2" /> {email}
+          </span>
         </p>
         <p className="text-gray-600 ">
-          {' '}
-          <span className="text-gray-800 uppercase font-semibold">{phone}</span>
+          <span className="flex flex-row justify-center text-gray-800 uppercase font-semibold">
+            <TiPhone className="mr-2" /> {phone}
+          </span>
         </p>
       </td>
       <td className="p-6 flex gap-4 ">
