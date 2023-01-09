@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import './index.css';
 import CustomerPage, { loader as customerLoader } from './pages/CustomerPage';
-import NewCustomerPage from './pages/NewCustomerPage';
+import NewCustomerPage, {
+  action as newCustomerAction,
+} from './pages/NewCustomerPage';
 
 const Router = createBrowserRouter([
   {
@@ -19,6 +21,7 @@ const Router = createBrowserRouter([
       {
         path: 'new/customer',
         element: <NewCustomerPage />,
+        action: newCustomerAction,
       },
     ],
   },

@@ -60,13 +60,8 @@ const CustomerPageForm: FC = function () {
           id="phone"
           type="text"
           placeholder="+54 9 11 1234-5678"
-          name="ph"
+          name="phone"
         />
-      </div>
-      <div className="flex justify-center ">
-        <button className="bg-indigo-600 p-2 font-bold uppercase text-white hover:bg-blue-700 w-full rounded-md">
-          Register
-        </button>
       </div>
     </>
   );
