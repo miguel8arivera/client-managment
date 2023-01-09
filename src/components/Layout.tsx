@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import { FiUser, FiUserPlus } from 'react-icons/fi';
 
 const Layout: FC = function () {
   const location = useLocation();
@@ -17,7 +18,12 @@ const Layout: FC = function () {
             } text-2xl block mt-2 hover:text-blue-500 `}
             to="/"
           >
-            Clientes
+            <div className="flex flex-row px-5 ">
+              <span className="mr-4">
+                <FiUser />
+              </span>
+              Clientes
+            </div>
           </Link>
           <Link
             className={`${
@@ -27,7 +33,12 @@ const Layout: FC = function () {
             } text-2xl block mt-2 hover:text-blue-500`}
             to="/new/customer"
           >
-            Nuevo Cliente
+            <div className="flex flex-row px-5 mt-10">
+              <span className="mr-4">
+                <FiUserPlus />
+              </span>
+              Nuevo Cliente
+            </div>
           </Link>
         </nav>
       </aside>
