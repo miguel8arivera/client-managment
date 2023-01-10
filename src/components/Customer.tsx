@@ -1,8 +1,14 @@
 import { FC } from 'react';
+import { deleteCustomer } from '../data/customers';
 
 import { TfiEmail } from 'react-icons/tfi';
 import { GiSmartphone } from 'react-icons/gi';
-import { useNavigate } from 'react-router-dom';
+import { Form, redirect, useNavigate } from 'react-router-dom';
+
+export async function action({ params }) {
+  await deleteCustomer(params.customerId);
+  return redirect('/');
+}
 
 const Customer: FC = function ({ customer }) {
   const navigate = useNavigate();
@@ -32,12 +38,23 @@ const Customer: FC = function ({ customer }) {
         >
           Edit
         </button>
-        <button
-          type="button"
-          className="text-red-700 hover:text-red-800 uppercase font-semibold text-xs"
+
+        <Form
+          method="post"
+          action={`/customer/${id}/destroy`}
+          onSubmit={(e) => {
+            if (!confirm('Are you sure you want to delete this customer?')) {
+              e.preventDefault();
+            }
+          }}
         >
-          Delete
-        </button>
+          <button
+            type="submit"
+            className="text-red-700 hover:text-red-800 uppercase font-semibold text-xs"
+          >
+            Delete
+          </button>
+        </Form>
       </td>
     </tr>
   );

@@ -12,6 +12,7 @@ import EditPage, {
 import NewCustomerPage, {
   action as newCustomerAction,
 } from './pages/NewCustomerPage';
+import { action as DeleteCustomerAction } from './components/Customer';
 
 const Router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const Router = createBrowserRouter([
         loader: EditCustomerLoader,
         action: EditCustomerAction,
         errorElement: <ErrorPage />,
+      },
+      {
+        path: 'customer/:customerId/destroy',
+        action: DeleteCustomerAction,
       },
     ],
   },
