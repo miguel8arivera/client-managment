@@ -2,8 +2,10 @@ import { FC } from 'react';
 
 import { TfiEmail } from 'react-icons/tfi';
 import { GiSmartphone } from 'react-icons/gi';
+import { useNavigate } from 'react-router-dom';
 
 const Customer: FC = function ({ customer }) {
+  const navigate = useNavigate();
   const { name, company, email, id, phone } = customer;
   return (
     <tr className="border-b" key={id}>
@@ -26,6 +28,7 @@ const Customer: FC = function ({ customer }) {
         <button
           type="button"
           className="text-blue-700 hover:text-blue-800 uppercase font-semibold text-xs "
+          onClick={() => navigate(`/customer/${id}/edit`)}
         >
           Edit
         </button>

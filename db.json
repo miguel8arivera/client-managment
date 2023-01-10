@@ -1,11 +1,11 @@
 {
   "customer": [
     {
-      "id": 1,
-      "name": "Juan",
-      "phone": 102013313,
+      "name": "Anna",
+      "company": "Russia",
       "email": "juan@juan.com",
-      "company": "Codigo Con Juan"
+      "phone": "102013313",
+      "id": 1
     },
     {
       "id": 2,

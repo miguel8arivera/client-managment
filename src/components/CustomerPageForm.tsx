@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-const CustomerPageForm: FC = function () {
+const CustomerPageForm: FC = function ({ customer }) {
   return (
     <>
       <div className="mb-4">
@@ -16,6 +16,7 @@ const CustomerPageForm: FC = function () {
           type="text"
           placeholder="name"
           name="name"
+          defaultValue={customer?.name}
         />
       </div>
       <div className="mb-4">
@@ -31,6 +32,7 @@ const CustomerPageForm: FC = function () {
           type="text"
           placeholder="company"
           name="company"
+          defaultValue={customer?.company}
         />
       </div>
       <div className="mb-4">
@@ -46,6 +48,7 @@ const CustomerPageForm: FC = function () {
           type="email"
           placeholder="name12@gmail.com"
           name="email"
+          defaultValue={customer?.email}
         />
       </div>
       <div className="mb-4">
@@ -61,6 +64,7 @@ const CustomerPageForm: FC = function () {
           type="text"
           placeholder="+54 9 11 1234-5678"
           name="phone"
+          defaultValue={customer?.phone}
         />
       </div>
     </>

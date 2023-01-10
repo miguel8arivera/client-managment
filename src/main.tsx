@@ -5,6 +5,10 @@ import { ErrorPage } from './components/ErrorPage';
 import Layout from './components/Layout';
 import './index.css';
 import CustomerPage, { loader as customerLoader } from './pages/CustomerPage';
+import EditPage, {
+  loader as EditCustomerLoader,
+  action as EditCustomerAction,
+} from './pages/EditCustomerPage';
 import NewCustomerPage, {
   action as newCustomerAction,
 } from './pages/NewCustomerPage';
@@ -19,11 +23,20 @@ const Router = createBrowserRouter([
         index: true,
         element: <CustomerPage />,
         loader: customerLoader,
+        errorElement: <ErrorPage />,
       },
       {
         path: 'new/customer',
         element: <NewCustomerPage />,
         action: newCustomerAction,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'customer/:customerId/edit',
+        element: <EditPage />,
+        loader: EditCustomerLoader,
+        action: EditCustomerAction,
+        errorElement: <ErrorPage />,
       },
     ],
   },
