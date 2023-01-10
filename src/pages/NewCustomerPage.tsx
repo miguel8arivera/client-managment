@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useNavigate, Form, useActionData } from 'react-router-dom';
+import { useNavigate, Form, useActionData, redirect } from 'react-router-dom';
 import CustomerPageForm from '../components/CustomerPageForm';
 import ErrorValidationForm from '../components/ErrorValidationForm';
 import { addCustomer } from '../data/customers';
@@ -33,8 +33,8 @@ export async function action({ request: request }: { request: MiRequest }) {
   if (Object.keys(errores).length > 0) {
     return errores;
   }
-  addCustomer(data);
-  return {};
+  await addCustomer(data);
+  return redirect('/');
 }
 
 const NewCustomerPage: FC = function () {
