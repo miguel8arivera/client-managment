@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useNavigate, Form, useActionData } from 'react-router-dom';
 import CustomerPageForm from '../components/CustomerPageForm';
 import ErrorValidationForm from '../components/ErrorValidationForm';
+import { addCustomer } from '../data/customers';
 
 interface MiRequest {
   method: string;
@@ -32,6 +33,7 @@ export async function action({ request: request }: { request: MiRequest }) {
   if (Object.keys(errores).length > 0) {
     return errores;
   }
+  addCustomer(data);
 }
 
 const NewCustomerPage: FC = function () {

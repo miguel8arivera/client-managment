@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useRouteError } from 'react-router';
 import img from '../assets/404.jpg';
 
 export const ErrorPage: FC = function () {
+  const error = useRouteError();
   const navigate = useNavigate();
   return (
     <>
