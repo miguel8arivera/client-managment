@@ -34,6 +34,7 @@ export async function action({ request: request }: { request: MiRequest }) {
     return errores;
   }
   addCustomer(data);
+  return {};
 }
 
 const NewCustomerPage: FC = function () {
