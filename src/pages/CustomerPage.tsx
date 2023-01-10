@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Customer from '../components/Customer';
-import { customers } from '../data/customers';
+import { customers, getCustomers } from '../data/customers';
 
 export function loader() {
+  const customers = getCustomers();
   return customers;
 }
 
@@ -46,7 +47,7 @@ const CustomerPage: FC = function () {
           </tbody>
         </table>
       ) : (
-        <p> No hay clientes</p>
+        <p className="text-center"> No hay clientes</p>
       )}
     </div>
   );
