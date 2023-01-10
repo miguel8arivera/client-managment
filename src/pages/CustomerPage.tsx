@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Customer from '../components/Customer';
-import { customers, getCustomers } from '../data/customers';
+import { getCustomers } from '../data/customers';
 
 export function loader() {
   const customers = getCustomers();
