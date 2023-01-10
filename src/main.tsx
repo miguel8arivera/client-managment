@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ErrorPage } from './components/ErrorPage';
 import Layout from './components/Layout';
 import './index.css';
 import CustomerPage, { loader as customerLoader } from './pages/CustomerPage';
@@ -12,6 +13,7 @@ const Router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
