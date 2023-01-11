@@ -30,10 +30,10 @@ const Customer: FC = function ({ customer }) {
           </span>
         </p>
       </td>
-      <td className="p-6 flex gap-4 ">
+      <td className="p-6 flex gap-6  justify-center">
         <button
           type="button"
-          className="text-blue-700 hover:text-blue-800 uppercase font-semibold text-xs "
+          className="bg-blue-700 text-white rounded-md p-3 hover:text-blue-800 uppercase font-semibold text-xs "
           onClick={() => navigate(`/customer/${id}/edit`)}
         >
           Edit
@@ -50,7 +50,7 @@ const Customer: FC = function ({ customer }) {
         >
           <button
             type="submit"
-            className="text-red-700 hover:text-red-800 uppercase font-semibold text-xs"
+            className="  rounded-md bg-red-600 text-white hover:text-red-800 uppercase font-semibold text-xs p-3 "
           >
             Delete
           </button>
