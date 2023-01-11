@@ -1,11 +1,11 @@
 {
   "customer": [
     {
-      "id": 2,
-      "name": "Karen",
-      "phone": 138198313,
+      "name": "kamila",
+      "company": "Codigo Con Juan",
       "email": "karen@juan.com",
-      "company": "Codigo Con Juan"
+      "phone": "138198313",
+      "id": 2
     },
     {
       "id": 3,
@@ -27,6 +27,27 @@
       "phone": 1398198938,
       "email": "kamila@valieva.com",
       "company": "Team russia"
+    },
+    {
+      "name": "Anna",
+      "company": "Apple",
+      "email": "aoeu@gmail.com",
+      "phone": "19291029012",
+      "id": 7
+    },
+    {
+      "name": "dominipene",
+      "company": "microsoft",
+      "email": "kamila@gmail.com",
+      "phone": "19291029012",
+      "id": 8
+    },
+    {
+      "name": "Anna",
+      "company": "Apple",
+      "email": "aoeu@gmail.com",
+      "phone": "19291029012",
+      "id": 9
     }
   ]
 }
